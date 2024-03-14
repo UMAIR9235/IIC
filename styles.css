@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/7defc091a129b48948f730474b109d8f?family=Gilmer+Bold);
+
+
+@font-face {
+    font-family: "Gilmer Bold";
+    src: url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.eot");
+    src: url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/7defc091a129b48948f730474b109d8f.svg#Gilmer Bold")format("svg");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilmer", sans-serif;
+}
+
+.hero-section-bg1{
+    animation: scaleBG1 8s linear 8s infinite;
+}
+.hero-section-bg2{
+    animation: scaleBG2 16s linear infinite;
+}
+
+
+
+
+.carousel-container {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carousel-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.stroke--text{
+    font-family: "Gilmer Bold";
+    font-weight: 700;
+    font-size: 133px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D9D9D9;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.stroke--text-mobile{
+    font-family: "Gilmer Bold";
+    font-weight: 700;
+    font-size: 52px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D9D9D9;
+    -webkit-text-fill-color: #ffffff;
+}
+
+
+.slide-track{
+    width: calc(312px * 12);
+    animation: autoPlayCarousel 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+
+.text-slider-track{
+    animation: autoPlayCarousel 40s linear infinite;
+}
+
+.hero-section-heading{
+    animation: headingAnim 16s linear infinite;
+}
+
+.hero-section-description{
+    animation: descriptionAnim 16s linear infinite;
+}
+
+.hero-section-button1{
+    animation: button1Anim 16s linear infinite;
+}
+
+.hero-section-button2{
+    animation: button2Anim 16s linear infinite;
+}
+
+@keyframes autoPlayCarousel {
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(calc(calc(-312px * 6) + calc(-11px*20))) ;
+    }
+}
+
+@keyframes scaleBG1 {
+    0%{
+        transform: scale(1);
+        display: block;
+    }
+    100%{
+        transform: scale(1.2);
+        display: none;
+
+    }
+}
+
+@keyframes scaleBG2 {
+    0%{
+        transform: scale(1);
+        display: block;
+    }
+    50%{
+        transform: scale(1.2);
+        display:none
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes headingAnim {
+    0%{
+       transform: translateX(-2000px);
+    }
+    5%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes descriptionAnim {
+    0%{
+        transform: translateY(100%);
+     }
+     5%{
+         transform: translateY(0);
+     }
+     100%{
+         transform: translateY(0);
+     }
+}
+
+@keyframes button1Anim {
+    0%{
+        transform: translateX(-100%)
+     }
+     5%{
+         transform: translateX(0);
+     }
+     100%{
+         transform: translateX(0);
+     }
+}
+
+@keyframes button2Anim {
+    0%{
+        transform: translateX(100%);
+     }
+     5%{
+         transform: translateX(0);
+     }
+     100%{
+         transform: translateX(0);
+     }
+}
